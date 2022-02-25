@@ -1,13 +1,13 @@
 /* plasmar productos al html */
-const contenedorProductos=document.querySelector(`.container .row`)
+const contenedorProductos=document.querySelector(`.items`)
 arrAnte.forEach((producto)=>{
     const divs=document.createElement(`div`);
-    divs.classList.add(`card`,"col-12","col-md-3",`col-sm-12`,`col-xxl-3`,"col-xl-3",`m-5`,"cards",`${producto.marca}`);
+    divs.classList.add("card",`${producto.marca}`, "col-xxl-4","col-xl-3", "productos-impresos", "m-5");
     divs.id= `${producto.id}`;
 
     divs.innerHTML=
     `
-    <div class="card-body ${producto.marca}">
+    <div class="card-body ${producto.marca} models">
         <h4 class="card-title d-flex justify-content-center">${producto.marca.toUpperCase()}</h4>
         <img src=${producto.img} class="card-img-top" alt="">
         <p class="modelo card-text d-flex justify-content-center">Modelo: ${producto.modelo}</p>
