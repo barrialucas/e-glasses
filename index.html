@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>E-Glasses</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg ">
+
+      <div class="container-fluid d-flex justify-content-around">
+        <a class="navbar-brand header__titulo" href="#">E-Glasses</a>
+
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav header__left">
+          <h2 id="Todos">Todos</h2>
+        </ul>
+
+        <div class="header__carro">
+          <a class="navbar-brand carro" id="modal-abrir">
+            <img src="img/carrito.png" alt="" width="50" height="44">
+          </a>
+        </div>
+
+        <div id="modal-containerr" class="modal-container2 carro2">
+          <div id="modalMio" class="carro2">
+            <div class="row">
+              <h3 class="col-xxl-6 d-flex justify-content-center mt-3">Carro</h3>
+              <div id="modal-cerrar"
+                class="col-xxl-6 d-flex justify-content-center align-items-center mt-3 modal-cerrar2">
+                <a class="fas fa-times cruz-cerrar"></a>
+              </div>
+
+            </div>
+            <hr>
+            <div class="row items-carro carro2" id="items">
+
+            </div>
+            <hr>
+            <h3 class="d-flex justify-content-center">Total:$ <strong class="total"></strong></h3>
+            <div class="asd d-flex justify-content-center mt-4">
+              <a class="custom-btn btn-3" data-toggle="modal" id="btnComprar"><span class="d-flex justify-content-center">Comprar!</span></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="container-fluid">
+      <div class="row main__row1">
+        <div class="col-sm-12 col-xl-6 d-flex justify-content-center flex-column">
+          <h1 class="main__row1--titulo">Buscá tu look de verano </h1>
+          <p>¿Quieres encontrar los mejores marcos que se adapten a la forma de tu cara? ¡Estás en el lugar correcto! En
+            solo unos minutos tendrás una selección personalizada de estilos para elegir</p>
+        </div>
+        <div class="col-xxl-6"></div>
+      </div>
+
+      <div class="row main__row2 d-flex justify-content-center">
+        <div class="col-xl-1 col-xxl-1"></div>
+        <div class="col-sm-12 col-xl-2 col-xxl-2 d-flex justify-content-center marcas" id="versace"><img src="marca/versace.png"
+            alt="" height="25" width="130"></div>
+        <div class="col-sm-12 col-xl-2 col-xxl-2 d-flex justify-content-center marcas" id="gucci"><img src="marca/gucci.png"
+            alt="" height="25" width="140"></div>
+        <div class="col-sm-12 col-xl-2 col-xxl-2 d-flex justify-content-center marcas" id="prada"> <img src="marca/prada.png"
+            alt="" height="25" width="120"></div>
+        <div class="col-sm-12 col-xl-2 col-xxl-2 d-flex justify-content-center marcas" id="vogue"><img src="marca/vogue.png"
+            alt="" height="25" width="120"></div>
+        <div class="col-sm-12 col-xl-2 col-xxl-2 d-flex justify-content-center marcas" id="dolce"><img src="marca/dole.png"
+            alt="" height="25" width="160"></div>
+        <div class="col-xl-1 col-xxl-1"></div>
+      </div>
+
+      <section class="container categoria">
+        <div class="row items" id="contenedor-productos">
+
+        </div>
+      </section>
+
+    </div>
+
+    <div class="contenedorMensajeAgregado" id="contenedorMensajeAgregado"></div>
+
+    <div class="contenedorMensajeAgregado2" id="contenedorMensajeAgregado2"></div>
+
+
+
+
+    <div id="modal-formulario">
+      <div class="fondo">
+        
+        <form class="modal show fade d-flex justify-content-center" tabindex="-1">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Formulario de compra</h5>
+                <button type="button" class="btn-close ax" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row d-flex justify-content-center mt-3">
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="name" class="form-label d-flex justify-content-center">Nombre </label>
+                      <input type="text" required="" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="surname" class="form-label d-flex justify-content-center">Apellido </label>
+                      <input type="text" required="" name="apellido" id="apellido" class="form-control">
+                    </div>
+                  </div>
+
+
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="mail" class="form-label d-flex justify-content-center">Email </label>
+                      <input type="email" required="" name="email" id="mail" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label d-flex justify-content-center">Teléfono </label>
+                      <input type="tel" required="" name="phone" id="telefono" class="form-control">
+                    </div>
+                  </div>
+
+                </div>
+                <p class="d-flex justify-content-center mt-5">Al llenar todos los campos correctamente se le enviara un
+                  cupón de pago a su email indicado<p>
+                    <h3 class="d-flex justify-content-center mt-5">Total:$<strong class="totalFormu"></strong></h3>
+
+              </div>
+              <div class="modal-footer d-flex justify-content-between">
+                <div class="d-flex align-items-center justify-content-center">
+                  <h5>Marcar para confirmar su compra</h5>
+                  <input type="checkbox" class="form-check-input ms-2 check" onclick="verificar()">
+                </div>
+                <a type="submit" class="btn btn-success" id="btnCompra2">Comprar</a>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="seguro" class="">
+      <div class="conf d-flex justify-content-center">
+        <div class="confirmacion-compra">
+          <h4 class="">Gracias por tu compra<br> <span class="nombreApellido"></span></h4>
+          <img class="fa-solid fa-circle-check check"></img>
+          <p>Se ha generado correctamente su comprobante de pago y enviado a su correo electronico:<br><strong class="email"></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+    integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+
+
+  <script src="js/modelos.js"></script>
+  <script src="js/general.js"></script>
+  <script src="js/carro.js"></script>
+  <script src="js/jquery.js"></script>
+
+
+
+
+</body>
+
+</html>
