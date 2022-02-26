@@ -64,6 +64,7 @@ function local(){
     let compras=JSON.parse(localStorage.getItem("compradores"));
     arrClientes.push(compras);
     console.log(arrClientes);
+    //esta informacion se exportara a un doc.
 };
 
 

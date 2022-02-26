@@ -12,7 +12,6 @@ let comprarItems = [];
 let totalCarro = 0;
 
 /* funciones */
-/* clicks botones */
 cargarAcciones();
 
 function cargarAcciones() {
@@ -31,29 +30,6 @@ function agregarProdcutos(e) {
 
     }
 };
-
-
-/* borrar productos */
-function borrarProducto(e) {
-
-    if (e.target.classList.contains("borrar-producto")) {
-        const borrarId = e.target.getAttribute("data-id")
-
-        comprarItems.forEach(valor => {
-            if (valor.id == borrarId) {
-                let restarPrecio = valor.precio * valor.cantidad;
-                totalCarro = totalCarro - restarPrecio;
-            }
-
-        });
-        comprarItems = comprarItems.filter(producto => producto.id !== borrarId);
-    }
-    if (comprarItems.length == 0) { //total=0
-        precioTotal.innerHTML = 0;
-    }
-    cargarHtml();
-}
-
 
 function cargarItems(producto) {
     const infoProductos = {
@@ -94,8 +70,28 @@ function cargarItems(producto) {
     cargarHtml();
 };
 
+/* borrar productos */
+function borrarProducto(e) {
 
-/* plasmar al carro */
+    if (e.target.classList.contains("borrar-producto")) {
+        const borrarId = e.target.getAttribute("data-id")
+
+        comprarItems.forEach(valor => {
+            if (valor.id == borrarId) {
+                let restarPrecio = valor.precio * valor.cantidad;
+                totalCarro = totalCarro - restarPrecio;
+            }
+
+        });
+        comprarItems = comprarItems.filter(producto => producto.id !== borrarId);
+    }
+    if (comprarItems.length == 0) { //total=0
+        precioTotal.innerHTML = 0;
+    }
+    cargarHtml();
+}
+
+/* plasmar productos agregados al carro */
 function cargarHtml() {
     borrarHtml();
     comprarItems.forEach(producto => {
@@ -135,11 +131,10 @@ function cargarHtml() {
     });
 
 };
-
+/* vaciar carro */
 function borrarHtml() {
     contenedorProductosCarro.innerHTML = "";
 }
-
 
 /* MENSAJES/ALERTAS */
 const mensajeAgregado = () => { //mensaje cuando se agrega un producto al carro
