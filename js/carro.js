@@ -35,7 +35,7 @@ function compraConfirmada() {
     $("#seguro").show();
     setTimeout(function () {
         $("#seguro").hide();
-    }, 2000);
+    }, 5000);
 
     comprarItems.length = 0;
     borrarHtml();
@@ -181,6 +181,6 @@ const mensajeStock = () => { //mensaje cuando agota el stock
     );
     setTimeout(function () {
         $(".confirmacion2").remove();
-    }, 3000);
+    }, 2000);
 
 };

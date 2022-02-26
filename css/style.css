@@ -602,6 +602,11 @@ body {
   margin-top: 15%;
 }
 
+.footer__ {
+  height: 50px;
+  background-color: #161616;
+}
+
 .nombreApellido {
   font-size: 20px;
 }
