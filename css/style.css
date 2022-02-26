@@ -440,11 +440,6 @@ body {
   transition: 0.5s;
 }
 
-.borrar-producto {
-  cursor: pointer;
-  padding: 7px;
-}
-
 .marcas {
   cursor: pointer;
 }
@@ -455,6 +450,11 @@ body {
 
 .cruz-cerrar {
   cursor: pointer;
+}
+
+.borrar-producto {
+  cursor: pointer;
+  padding: 10px;
 }
 
 .confirmacion {

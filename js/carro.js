@@ -8,8 +8,6 @@ let cerrarFor = document.querySelector(".ax");
 let totalFormu = document.querySelector(".totalFormu");
 let comprar2 = document.querySelector("#btnCompra2");
 
-
-
 let comprarItems = [];
 let totalCarro = 0;
 
@@ -22,25 +20,6 @@ function cargarAcciones() {
     contenedorProductosCarro.addEventListener("click", borrarProducto);
     btnFormu.addEventListener("click", abrirFormu);
     cerrarFor.addEventListener("click", cerrarFormu);
-};
-/* formulario de compra */
-function verificar() {
-    comprar2.addEventListener("click", compraConfirmada);
-    comprar2.addEventListener("click", cerrarFormu);
-    comprar2.addEventListener("click", obtenerDatos);
-    comprar2.addEventListener("click", local);
-};
-
-function compraConfirmada() {
-    $("#seguro").show();
-    setTimeout(function () {
-        $("#seguro").hide();
-    }, 5000);
-
-    comprarItems.length = 0;
-    borrarHtml();
-    totalCarro = 0;
-    precioTotal.innerHTML = totalCarro;
 };
 
 /* agregar productos */
@@ -111,7 +90,7 @@ function cargarItems(producto) {
     };
     /* suma del total */
     totalCarro = parseFloat(totalCarro) + parseFloat(infoProductos.precio);
-    
+
     cargarHtml();
 };
 
@@ -141,8 +120,8 @@ function cargarHtml() {
           </div>
         </div>
 
-        <div class="col-lg-2 col-xl-2 col-xxl-2 borrar-producto d-flex align-items-center" data-id="${id}">
-            <a class="fas fa-trash-alt borrar-producto"></a>
+        <div class="col-lg-2 col-xl-2 col-xxl-2 d-flex align-items-center justify-content-center">
+            <img class="fas fa-trash-alt borrar-producto" data-id="${id}">
         </div>
       </div>
     </div>
@@ -174,13 +153,33 @@ const mensajeAgregado = () => { //mensaje cuando se agrega un producto al carro
     }, 2000);
 };
 const mensajeStock = () => { //mensaje cuando agota el stock
-    $("#contenedorMensajeAgregado2").append(
+    $("#contenedorMensajeStock").append(
         `<div class="confirmacion2">
       <p>Stock agotado!<p>
-  </div>`
+    </div>`
     );
     setTimeout(function () {
         $(".confirmacion2").remove();
     }, 2000);
 
+};
+
+/* formulario de compra */
+function verificar() {
+    comprar2.addEventListener("click", compraConfirmada);
+    comprar2.addEventListener("click", cerrarFormu);
+    comprar2.addEventListener("click", obtenerDatos);
+    comprar2.addEventListener("click", local);
+};
+
+function compraConfirmada() {
+    $("#seguro").show();
+    setTimeout(function () {
+        $("#seguro").hide();
+    }, 5000);
+
+    comprarItems.length = 0;
+    borrarHtml();
+    totalCarro = 0;
+    precioTotal.innerHTML = totalCarro;
 };
