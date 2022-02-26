@@ -603,8 +603,25 @@ body {
 }
 
 .footer__ {
-  height: 50px;
+  height: 70px;
   background-color: #161616;
+  width: 100%;
+}
+
+.footer__ .fa-github {
+  color: #fff;
+  height: 50px;
+  cursor: pointer;
+}
+
+.footer__ .github {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nombreApellido {
