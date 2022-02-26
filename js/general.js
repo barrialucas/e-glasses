@@ -2,7 +2,7 @@
 const contenedorProductos=document.querySelector(`.items`)
 arrAnte.forEach((producto)=>{
     const divs=document.createElement(`div`);
-    divs.classList.add("card",`${producto.marca}`, "col-xxl-4","col-xl-3", "productos-impresos", "m-5");
+    divs.classList.add("card",`${producto.marca}`, "col-xxl-4","col-xl-3", "productos-impresos", "m-5", "cards");
     divs.id= `${producto.id}`;
 
     divs.innerHTML=
@@ -41,7 +41,7 @@ function cerrarFormu(){
     $("#modal-formulario").hide();
 };
 
-/* local storage y ajax */
+/* local storage */
 
 arrClientes=[];
 function obtenerDatos(){
@@ -59,14 +59,12 @@ function obtenerDatos(){
         tel:tel,
     };
     localStorage.setItem("compradores", JSON.stringify(clientes));
-
-}
+};
 function local(){
     let compras=JSON.parse(localStorage.getItem("compradores"));
     arrClientes.push(compras);
     console.log(arrClientes);
-
-}
+};
 
 
 
