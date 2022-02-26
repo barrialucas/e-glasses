@@ -434,8 +434,8 @@ body {
 
 .cards:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -635,7 +635,7 @@ body {
   .encabezado {
     margin-top: 360px;
   }
-  .add {
+  .modal-formu {
     width: 90%;
   }
 }

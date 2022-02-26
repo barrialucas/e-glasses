@@ -379,7 +379,7 @@ background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 
 }
 .cards:hover{
     cursor: pointer;
-    transform: scale(1.20);
+    transform: scale(1.10);
     transition: 0.5s;
 }
 .borrar-producto{
@@ -571,7 +571,7 @@ background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 
   .encabezado{
     margin-top: 360px;
   }
-  .add{
+  .modal-formu{
     width: 90%;
   }
 }
