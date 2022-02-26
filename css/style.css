@@ -605,4 +605,22 @@ body {
 .nombreApellido {
   font-size: 20px;
 }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .items-carro {
+    height: 600px;
+  }
+  .encabezado {
+    margin-top: 360px;
+  }
+  .add {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .items-carro {
+    height: 600px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

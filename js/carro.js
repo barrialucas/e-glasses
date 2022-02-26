@@ -126,11 +126,11 @@ function cargarHtml() {
         rows.innerHTML =
             `<div class="card">
         <div class="row g-0">
-        <div class="col-xl-4 col-xxl-4 d-flex align-items-center">
+        <div class="col-lg-4 col-xl-4 col-xxl-4 d-flex align-items-center">
           <img src="${imagen}" class="img-fluid rounded-end" alt="...">
         </div>
 
-        <div class="col-xl-6 col-xxl-6">
+        <div class="col-lg-6 col-xl-6 col-xxl-6">
           <div class="card-body">
             <h4 class="card-title d-flex justify-content-center">${marca}</h4>
             <h6 class="card-text d-flex justify-content-center">${modelo}</h6>
@@ -141,7 +141,7 @@ function cargarHtml() {
           </div>
         </div>
 
-        <div class="col-xl-2 col-xxl-2 borrar-producto d-flex align-items-center" data-id="${id}">
+        <div class="col-lg-2 col-xl-2 col-xxl-2 borrar-producto d-flex align-items-center" data-id="${id}">
             <a class="fas fa-trash-alt borrar-producto"></a>
         </div>
       </div>

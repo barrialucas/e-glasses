@@ -122,6 +122,8 @@ body{
     overflow-x: hidden; 
 }
 
+
+
 .items{
   margin: 30px;
   display: flex;
@@ -539,4 +541,22 @@ background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 
 
 .nombreApellido{
   font-size: 20px;
+}
+
+@media (min-width:992px) and (max-width:1200px){//LG
+  .items-carro{
+    height: 600px;
+  }
+  .encabezado{
+    margin-top: 360px;
+  }
+  .add{
+    width: 90%;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1400px){//XL
+  .items-carro{
+    height: 600px;
+  }
 }
