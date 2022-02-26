@@ -2,7 +2,7 @@
 const contenedorProductos=document.querySelector(`.items`)
 arrAnte.forEach((producto)=>{
     const divs=document.createElement(`div`);
-    divs.classList.add("card",`${producto.marca}`, "col-xxl-4","col-xl-3", "productos-impresos", "m-5", "cards");
+    divs.classList.add("cards", "card",`${producto.marca}`, "col-xxl-4","col-xl-3", "productos-impresos", "m-5");
     divs.id= `${producto.id}`;
 
     divs.innerHTML=
